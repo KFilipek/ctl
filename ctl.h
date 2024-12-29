@@ -37,8 +37,9 @@ typedef struct Option {
 
 /* API */
 void init();
-void addPath(char *path, void *value, enum OptionType type, enum OperationType operation, void (*callback)(void *));
+// Add new path to the CTL
+void addPath(char *path, enum OptionType type, enum OperationType operation, void (*callback)(void *)); // Maybe separate the callback type
 void printPaths();
-int pathExists(char *path);
+int pathExists(const char *path);
 
 #endif // CTL_H
